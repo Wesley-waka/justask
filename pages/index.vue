@@ -1,7 +1,9 @@
 <template>
   <nav class=" p-4">
     <div class="container mx-auto flex justify-between items-center">
-      <NuxtLink to="/" class="text-gray-700 text-xl font-bold">Logo</NuxtLink>
+      <NuxtLink to="/" class="text-gray-700 text-xl font-bold">
+        <img src="~/assets/images/just-ask.svg" alt="Just Ask Logo" class="h-14">
+      </NuxtLink>
       <div class="hidden md:flex space-x-4">
         <NuxtLink to="/" class="text-gray-700 hover:text-blue-200">Home</NuxtLink>
         <NuxtLink to="/about" class="text-gray-700 hover:text-blue-200">About</NuxtLink>
