@@ -5,10 +5,10 @@
         <img src="~/assets/images/just-ask.svg" alt="Just Ask Logo" class="h-14">
       </NuxtLink>
       <div class="hidden md:flex space-x-4">
-        <NuxtLink to="/" class="text-gray-700 hover:text-blue-200">Home</NuxtLink>
-        <NuxtLink to="/about" class="text-gray-700 hover:text-blue-200">About</NuxtLink>
-        <NuxtLink to="/services" class="text-gray-700 hover:text-blue-200">Services</NuxtLink>
-        <NuxtLink to="/contact" class="text-gray-700 hover:text-blue-200">Contact</NuxtLink>
+        <NuxtLink to="/" class="text-gray-700 hover:mycol">Home</NuxtLink>
+        <NuxtLink to="/about" class="text-gray-700 hover:mycol">About</NuxtLink>
+        <NuxtLink to="/services" class="text-gray-700 hover:mycol">Services</NuxtLink>
+        <NuxtLink to="/contact" class="text-gray-700 hover:mycol">Contact</NuxtLink>
       </div>
       <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-700 focus:outline-none">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@
           <p class="text-gray-700">{{ service.description.slice(0, 100) }}...</p>
         </div>
         <div class="px-6 py-4 bg-white bg-opacity-70">
-          <button class="text-blue-500 hover:underline">Learn More</button>
+          <button class="mycol hover:underline">Learn More</button>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
     <div v-if="activeService" class="mt-8 bg-gray-100 p-6 rounded-lg shadow-md">
       <h3 class="text-2xl font-semibold mb-4">{{ activeService.title }}</h3>
       <p class="text-gray-700">{{ activeService.description }}</p>
-      <button @click="activeService = null" class="mt-4 text-blue-500 hover:underline">Close</button>
+      <button @click="activeService = null" class="mt-4 mycol hover:underline">Close</button>
     </div>
   </div>
   <section class="bg-white py-16">
@@ -172,7 +172,7 @@
             type="text"
             id="name"
             placeholder="Your Name"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:mycol"
             required
           />
         </div>
@@ -183,7 +183,7 @@
             type="email"
             id="email"
             placeholder="Your Email"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:mycol"
             required
           />
         </div>
@@ -194,13 +194,13 @@
             id="message"
             placeholder="Your Message"
             rows="4"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:mycol"
             required
           ></textarea>
         </div>
         <button
           type="submit"
-          class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full mycol text-white py-2 px-4 rounded-md hover:mycol focus:outline-none focus:ring-2 focus:mycol"
         >
           Send Message
         </button>
@@ -236,7 +236,7 @@
     </div>
 
     <!-- Bottom Bar -->
-    <div class="bg-gray-800 text-white text-center py-4">
+    <div class="mycol text-white text-center py-4 ">
       <p class="text-sm">© 2024 Company Name. All rights reserved.</p>
     </div>
   </footer>
@@ -379,6 +379,9 @@ const handleSubmit = () => {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+.mycol{
+  background-color: rgb(158,40,41) ;
 }
 
 @media (max-width: 768px) {
