@@ -49,7 +49,7 @@
           <p class="text-gray-700">{{ service.description.slice(0, 100) }}...</p>
         </div>
         <div class="px-6 py-4 bg-white bg-opacity-70">
-          <button class="mycol text-white hover:underline">Learn More</button>
+          <button class="mycol text-white hover:underline p-2 rounded-sm">Learn More</button>
         </div>
       </div>
     </div>
@@ -228,16 +228,15 @@
 
       <!-- Contact Information -->
       <div class="mt-4 md:mt-0 text-center md:text-right">
-        <p class="text-sm">123 Main Street, Suite 456</p>
-        <p class="text-sm">City, Country 78910</p>
-        <p class="text-sm">Email: contact@example.com</p>
-        <p class="text-sm">Phone: (123) 456-7890</p>
+        <p class="text-sm">147 W 35th st, NewYork, NY 10001</p>
+        <p class="text-sm">+1(917)6094597</p>
+        <p class="text-sm">Email: info@zemy-group.com</p>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="mycol text-white text-center py-4 ">
-      <p class="text-sm">© 2024 Company Name. All rights reserved.</p>
+      <p class="text-sm">© 2024 Zemy-group.cpm. All rights reserved.</p>
     </div>
   </footer>
 
