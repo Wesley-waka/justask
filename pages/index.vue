@@ -49,7 +49,7 @@
           <p class="text-gray-700">{{ service.description.slice(0, 100) }}...</p>
         </div>
         <div class="px-6 py-4 bg-white bg-opacity-70">
-          <button class="mycol hover:underline">Learn More</button>
+          <button class="mycol text-white hover:underline">Learn More</button>
         </div>
       </div>
     </div>
