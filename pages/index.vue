@@ -1,28 +1,6 @@
 <template>
-  <nav class=" p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <NuxtLink to="/" class="text-gray-700 text-xl font-bold">
-        <img src="~/assets/images/just-ask.svg" alt="Just Ask Logo" class="h-14">
-      </NuxtLink>
-      <div class="hidden md:flex space-x-4">
-        <NuxtLink to="/" class="text-gray-700 hover:mycol">Home</NuxtLink>
-        <NuxtLink to="/about-us" class="text-gray-700 hover:mycol">About</NuxtLink>
-        <NuxtLink to="/services" class="text-gray-700 hover:mycol">Services</NuxtLink>
-        <NuxtLink to="/contact" class="text-gray-700 hover:mycol">Contact</NuxtLink>
-      </div>
-      <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-700 focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div>
-    <div v-if="isMenuOpen" class="md:hidden mt-2">
-      <NuxtLink to="/" class="block text-gray-700 py-2">Home</NuxtLink>
-      <NuxtLink to="/about" class="block text-gray-700 py-2">About</NuxtLink>
-      <NuxtLink to="/services" class="block text-gray-700 py-2">Services</NuxtLink>
-      <NuxtLink to="/contact" class="block text-gray-700 py-2">Contact</NuxtLink>
-    </div>
-  </nav>
+  <Navbar />
+
   <div class="grid grid-cols-1 md:grid-cols-2 h-full">
     <div class="flex items-center justify-center mycolor h-full">
       <h3 class="text-[28px] text-white font-bold text-center md:text-left">
@@ -217,6 +195,9 @@
 </template>
 
 <script setup>
+import Navbar from '~/layouts/navbar.vue';
+
+
 const isMenuOpen = ref(false)
 
 const services = [
